@@ -1,0 +1,23 @@
+#include <iostream>
+#include <vector>
+#include <algorithm> 
+
+// Function to reverse a vector
+std::vector<int> reverseVector(const std::vector<int>& input) {
+    std::vector<int> reversed = input;
+    std::reverse(reversed.begin(), reversed.end());
+    return reversed;
+}
+
+int main() {
+    std::vector<int> vec = {1, 2, 3, 4, 5};
+
+    std::vector<int> reversedVec = reverseVector(vec);
+
+    std::cout << "Reversed vector: ";
+    for (int num : reversedVec) {
+        std::cout << num << " ";
+    }
+
+    return 0;
+}

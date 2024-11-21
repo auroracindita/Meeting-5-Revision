@@ -1,0 +1,21 @@
+# Compiler
+CXX = g++
+# Compiler flags
+CXXFLAGS = -std=c++11 -Wall
+# Target executable
+TARGET = Meeting5Problem1Rev
+
+# Default target
+all: $(TARGET)
+
+# Compile the C++ file
+$(TARGET): Meeting5Problem1Rev.cpp
+	$(CXX) $(CXXFLAGS) -o $(TARGET) Meeting5Problem1Rev.cpp
+
+# Run the program
+run: $(TARGET)
+	./$(TARGET)
+
+# Clean up build files
+clean:
+	rm -f $(TARGET)
